@@ -1,0 +1,12 @@
+num = input("Enter nr coeff: ");
+den = input("Enter dr coeff: ");
+[H,w]=freqz(num,den,512);
+subplot(3,1,1);
+plot(w,abs(H)); grid on;
+title('Mag response');
+subplot(3,1,2);
+plot(w, angle(H)); grid on;
+title('Phase response');
+subplot(3,1,3);
+zplane(num,den);
+title('Pole zero plot');

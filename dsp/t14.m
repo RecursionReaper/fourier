@@ -1,0 +1,11 @@
+h = input("Enter the sequence h(n): ");
+[H,w] = freqz(h, 1, 512);
+subplot(3,1,1);
+plot(w, abs(H)); grid on;
+title('Magnitude Response of h(n)');
+subplot(3,1,2);
+plot(w, angle(H)); grid on;
+title('Phase Response of h(n)');
+subplot(3,1,3);
+zplane(h, 1);
+title('Pole-Zero Plot of h(n)');
